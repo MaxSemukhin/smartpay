@@ -12,6 +12,7 @@ using Serilog;
 using SmartPay.Data;
 using SmartPay.Mapping;
 using SmartPay.Models;
+using SmartPay.RecommendationServices;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +36,10 @@ builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 });
+
+builder.Services.AddScoped<IRecommendationService, CollaborationBasedRecommendations>();
+builder.Services.AddScoped<IRecommendationService, FavoriteCategoriesBasedRecommendations>();
+builder.Services.AddScoped<IRecommendationService, ContentBasedRecommendations>();
 
 builder.Services.AddSwaggerGen(c =>
 {

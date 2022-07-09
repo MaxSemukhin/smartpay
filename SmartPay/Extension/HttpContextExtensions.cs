@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using SmartPay.Models;
 
-namespace SmartPay.Controllers;
+namespace SmartPay;
 
 public static class HttpContextExtensions
 {
