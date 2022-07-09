@@ -219,6 +219,49 @@ public class RecomendationsController : ControllerBase
          return recommendations;
     }
 
+    private async Task<List<Recommendation>> FavoriteCategoriesBased()
+    {
+        var user = HttpContext.GetUser();
+        await _db.Entry(user).Collection(u => u.FavoriteCategories).LoadAsync();
+        
+        var checks = _db.Checks.Where(c => c.UserId == HttpContext.GetUser().Id);
+        var products = _db.Products.Where(p => user.FavoriteCategories.Contains(p.Category.Category));
+        
+        var counted = await products
+            .GroupBy(p => p.Id)
+            .Select(y => new
+            {
+                Element = y.Key,
+                Counter = y.Count(),
+                Product = y.First()
+            }).ToListAsync();
+
+        var unOrdered = counted.Select(p => new
+        {
+            Element = p.Element,
+            Counter = p.Counter,
+            Product = p.Product,
+            Popularity = _db.Checks.Where(c => c.Products.Contains(p.Product)).Count()
+        });
+        
+        var maxCounter = unOrdered.MaxBy(c => c.Counter).Counter;
+        var minCounter = unOrdered.MinBy(c => c.Counter).Counter;
+        var cm = maxCounter - minCounter;
+        
+        var maxPopularity = unOrdered.MaxBy(c => c.Popularity).Popularity;
+        var minPopularity = unOrdered.MinBy(c => c.Popularity).Popularity;
+        var pm = maxPopularity - minPopularity;
+        
+        var results = unOrdered
+            .Select(c => new { Product = c.Product, Score = (cm != 0 ? c.Counter / cm : 1) + (pm > 0 ? c.Popularity / pm : 0) })
+            .DistinctBy(c => c.Product.Id)
+            .OrderByDescending(c => c.Score).Take(10).ToList();
+
+        var recommendationList = results.Select(r => new Recommendation() { Product = r.Product, Score = r.Score }).ToList();
+
+        return recommendationList;
+    }
+
     private Product ProductWithoutChecks(Product product)
     {
         product.Checks = null;
@@ -232,12 +275,13 @@ public class RecomendationsController : ControllerBase
         
         var contendBased = ContentBased();
         var collaborationBased = CollaborationBased();
-        // ToDo Любимые категории
+        var favoriteCategoriesBased = FavoriteCategoriesBased();
 
-        await Task.WhenAll(contendBased, collaborationBased); // ToDo Перенести в интерфейсы
+        await Task.WhenAll(contendBased, collaborationBased, favoriteCategoriesBased); // ToDo Перенести в интерфейсы
 
         recommendationList = recommendationList.Concat(contendBased.Result).ToList();
         recommendationList = recommendationList.Concat(collaborationBased.Result).ToList();
+        recommendationList = recommendationList.Concat(favoriteCategoriesBased.Result).ToList();
 
         recommendationList = recommendationList.GroupBy(l => l.Product.Id).Select(g => new Recommendation()
         {
