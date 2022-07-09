@@ -6,6 +6,7 @@ public class SubCategory
     
     public string Name { get; set; }
     
+    public int CategoryId { get; set; }
     public Category Category { get; set; }
     public List<Product> Products { get; set; }
 }

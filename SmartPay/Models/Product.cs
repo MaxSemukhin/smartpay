@@ -8,6 +8,9 @@ public class Product
     public int Price { get; set; }
     
     public List<Check> Checks { get; set; }
+    
+    public int MerchantId { get; set; }
     public Merchant Merchant { get; set; }
+    public int CategoryId { get; set; }
     public SubCategory? Category { get; set; }
 }

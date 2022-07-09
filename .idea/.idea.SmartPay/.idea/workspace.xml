@@ -5,13 +5,12 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Client base auth">
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LogoutPage.tsx" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +25,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1139bec68f639ea68cf7ec50a3d2dcb5f2ebeeb7e1ed5151656aa3f3ac56cbfe/NavigationExpandingExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5b1a926c1df14e2e15b7987d838751ea3bd34e17b41df550bd2e01df3bb7a95/TimeSpanFormat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a1ad32abaee44480b66c2c1fcee9628cca92a4cd272eced5781564201180/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ab1417a245d2dd9ac4c8aea3ab1eeb0eca78f1bd9192d53675c3041d14d/IdentityUserLogin.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="36263000" />
+      <workItem from="1657299839367" duration="48313000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657348638517</created>
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657359962910</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Logout page">
+      <created>1657362446595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657362446595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +168,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Auth via id" />
     <MESSAGE value="Client base auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client base auth" />
+    <MESSAGE value="Logout page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logout page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -169,5 +178,11 @@
         <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="new System.Linq.SystemCore_EnumerableDebugView&lt;&lt;&gt;f__AnonymousType1&lt;int, int, System.Collections.Generic.List&lt;SmartPay.Models.Product&gt;&gt;&gt;(this.&lt;c&gt;5__5).Items[0]" />
+        <watch expression="new System.Linq.SystemCore_EnumerableDebugView&lt;&lt;&gt;f__AnonymousType1&lt;int, int, System.Collections.Generic.List&lt;SmartPay.Models.Product&gt;&gt;&gt;(this.&lt;c&gt;5__5).Items[0]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
