@@ -56,7 +56,11 @@
 
     <ItemGroup>
       <TypeScriptCompile Include="ClientApp\src\App.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\components\AuthProvider.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\components\AuthSwitch.tsx" />
       <TypeScriptCompile Include="ClientApp\src\main.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\pages\IndexPage.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\pages\LoginPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\vite-env.d.ts" />
       <TypeScriptCompile Include="ClientApp\vite.config.ts" />
     </ItemGroup>

@@ -5,23 +5,30 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Extension/HttpContextExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/JWTData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/LoginViaIdModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Auth via id">
+      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/IndexPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/ChecksController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Check.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript React Component" />
+      </list>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,6 +94,21 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="openapi" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/SmartPay/ClientApp/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="openapi" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.openapi" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="30383000" />
+      <workItem from="1657299839367" duration="35307000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657348638517</created>
@@ -105,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657348638517</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Auth via id">
+      <created>1657353212567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657353212567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +156,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Auth via id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth via id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
