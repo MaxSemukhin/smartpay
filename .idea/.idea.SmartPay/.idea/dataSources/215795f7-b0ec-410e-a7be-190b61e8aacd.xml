@@ -1332,279 +1332,576 @@
     <argument id="490" parent="169">
       <Position>1</Position>
     </argument>
-    <table id="491" parent="170" name="Categories"/>
-    <table id="492" parent="170" name="CheckProduct"/>
-    <table id="493" parent="170" name="Checks"/>
-    <table id="494" parent="170" name="MerchantCategories"/>
-    <table id="495" parent="170" name="Merchants"/>
-    <table id="496" parent="170" name="Products"/>
-    <table id="497" parent="170" name="SubCategories"/>
-    <table id="498" parent="170" name="Users"/>
-    <table id="499" parent="170" name="__EFMigrationsHistory"/>
-    <table id="500" parent="170" name="sqlite_master">
+    <table id="491" parent="170" name="AspNetRoleClaims"/>
+    <table id="492" parent="170" name="AspNetRoles"/>
+    <table id="493" parent="170" name="AspNetUserClaims"/>
+    <table id="494" parent="170" name="AspNetUserLogins"/>
+    <table id="495" parent="170" name="AspNetUserRoles"/>
+    <table id="496" parent="170" name="AspNetUserTokens"/>
+    <table id="497" parent="170" name="AspNetUsers"/>
+    <table id="498" parent="170" name="Categories"/>
+    <table id="499" parent="170" name="CheckProduct"/>
+    <table id="500" parent="170" name="Checks"/>
+    <table id="501" parent="170" name="MerchantCategories"/>
+    <table id="502" parent="170" name="Merchants"/>
+    <table id="503" parent="170" name="Products"/>
+    <table id="504" parent="170" name="SubCategories"/>
+    <table id="505" parent="170" name="__EFMigrationsHistory"/>
+    <table id="506" parent="170" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="501" parent="170" name="sqlite_sequence">
+    <table id="507" parent="170" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="502" parent="491" name="Id">
+    <column id="508" parent="491" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="503" parent="491" name="MCC">
+    <column id="509" parent="491" name="RoleId">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="504" parent="491" name="Name">
+    <column id="510" parent="491" name="ClaimType">
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <key id="505" parent="491" name="PK_Categories">
+    <column id="511" parent="491" name="ClaimValue">
+      <DataType>TEXT|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="512" parent="491" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetRoles</RefKeyName>
+      <RefTableName>AspNetRoles</RefTableName>
+    </foreign-key>
+    <index id="513" parent="491" name="IX_AspNetRoleClaims_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="514" parent="491" name="PK_AspNetRoleClaims">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="506" parent="492" name="ChecksUid">
+    <column id="515" parent="492" name="Id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="507" parent="492" name="ProductsId">
+    <column id="516" parent="492" name="Name">
+      <DataType>TEXT|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="517" parent="492" name="NormalizedName">
+      <DataType>TEXT|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="518" parent="492" name="ConcurrencyStamp">
+      <DataType>TEXT|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <index id="519" parent="492" name="RoleNameIndex">
+      <ColNames>NormalizedName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="520" parent="492" name="PK_AspNetRoles">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="521" parent="493" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="522" parent="493" name="UserId">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="508" parent="492" name="FK_CheckProduct_Checks_ChecksUid">
+    <column id="523" parent="493" name="ClaimType">
+      <DataType>TEXT|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="524" parent="493" name="ClaimValue">
+      <DataType>TEXT|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="525" parent="493" name="FK_AspNetUserClaims_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="526" parent="493" name="IX_AspNetUserClaims_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="527" parent="493" name="PK_AspNetUserClaims">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="528" parent="494" name="LoginProvider">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="529" parent="494" name="ProviderKey">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="530" parent="494" name="ProviderDisplayName">
+      <DataType>TEXT|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="531" parent="494" name="UserId">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="532" parent="494" name="FK_AspNetUserLogins_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="533" parent="494" name="sqlite_autoindex_AspNetUserLogins_1">
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="534" parent="494" name="IX_AspNetUserLogins_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="535" parent="494" name="PK_AspNetUserLogins">
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserLogins_1</UnderlyingIndexName>
+    </key>
+    <column id="536" parent="495" name="UserId">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="537" parent="495" name="RoleId">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="538" parent="495" name="FK_AspNetUserRoles_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <foreign-key id="539" parent="495" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetRoles</RefKeyName>
+      <RefTableName>AspNetRoles</RefTableName>
+    </foreign-key>
+    <index id="540" parent="495" name="sqlite_autoindex_AspNetUserRoles_1">
+      <ColNames>UserId
+RoleId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="541" parent="495" name="IX_AspNetUserRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="542" parent="495" name="PK_AspNetUserRoles">
+      <ColNames>UserId
+RoleId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserRoles_1</UnderlyingIndexName>
+    </key>
+    <column id="543" parent="496" name="UserId">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="544" parent="496" name="LoginProvider">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="545" parent="496" name="Name">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="546" parent="496" name="Value">
+      <DataType>TEXT|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="547" parent="496" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="548" parent="496" name="sqlite_autoindex_AspNetUserTokens_1">
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="549" parent="496" name="PK_AspNetUserTokens">
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserTokens_1</UnderlyingIndexName>
+    </key>
+    <column id="550" parent="497" name="Id">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="551" parent="497" name="AccessFailedCount">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="552" parent="497" name="ConcurrencyStamp">
+      <DataType>TEXT|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="553" parent="497" name="Email">
+      <DataType>TEXT|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="554" parent="497" name="EmailConfirmed">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="555" parent="497" name="IsAdmin">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="556" parent="497" name="LockoutEnabled">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="557" parent="497" name="LockoutEnd">
+      <DataType>TEXT|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="558" parent="497" name="NormalizedEmail">
+      <DataType>TEXT|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="559" parent="497" name="NormalizedUserName">
+      <DataType>TEXT|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="560" parent="497" name="PasswordHash">
+      <DataType>TEXT|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="561" parent="497" name="PhoneNumber">
+      <DataType>TEXT|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="562" parent="497" name="PhoneNumberConfirmed">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="563" parent="497" name="SecurityStamp">
+      <DataType>TEXT|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="564" parent="497" name="TwoFactorEnabled">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="565" parent="497" name="UserName">
+      <DataType>TEXT|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <index id="566" parent="497" name="UserNameIndex">
+      <ColNames>NormalizedUserName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="567" parent="497" name="EmailIndex">
+      <ColNames>NormalizedEmail</ColNames>
+    </index>
+    <key id="568" parent="497" name="PK_AspNetUsers">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="569" parent="498" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="570" parent="498" name="MCC">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="571" parent="498" name="Name">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <key id="572" parent="498" name="PK_Categories">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="573" parent="499" name="ChecksUid">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="574" parent="499" name="ProductsId">
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="575" parent="499" name="FK_CheckProduct_Checks_ChecksUid">
       <ColNames>ChecksUid</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Uid</RefColNames>
       <RefKeyName>PK_Checks</RefKeyName>
       <RefTableName>Checks</RefTableName>
     </foreign-key>
-    <foreign-key id="509" parent="492" name="FK_CheckProduct_Products_ProductsId">
+    <foreign-key id="576" parent="499" name="FK_CheckProduct_Products_ProductsId">
       <ColNames>ProductsId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefKeyName>PK_Products</RefKeyName>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="510" parent="492" name="sqlite_autoindex_CheckProduct_1">
+    <index id="577" parent="499" name="sqlite_autoindex_CheckProduct_1">
       <ColNames>ChecksUid
 ProductsId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="511" parent="492" name="IX_CheckProduct_ProductsId">
+    <index id="578" parent="499" name="IX_CheckProduct_ProductsId">
       <ColNames>ProductsId</ColNames>
     </index>
-    <key id="512" parent="492" name="PK_CheckProduct">
+    <key id="579" parent="499" name="PK_CheckProduct">
       <ColNames>ChecksUid
 ProductsId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_CheckProduct_1</UnderlyingIndexName>
     </key>
-    <column id="513" parent="493" name="Uid">
+    <column id="580" parent="500" name="Uid">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="514" parent="493" name="Id">
+    <column id="581" parent="500" name="Id">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="515" parent="493" name="UserId">
+    <column id="582" parent="500" name="UserId">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="516" parent="493" name="FK_Checks_Users_UserId">
+    <foreign-key id="583" parent="500" name="FK_Checks_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefKeyName>PK_Users</RefKeyName>
-      <RefTableName>Users</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="517" parent="493" name="IX_Checks_UserId">
+    <index id="584" parent="500" name="IX_Checks_UserId">
       <ColNames>UserId</ColNames>
     </index>
-    <key id="518" parent="493" name="PK_Checks">
+    <key id="585" parent="500" name="PK_Checks">
       <ColNames>Uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="519" parent="494" name="Id">
+    <column id="586" parent="501" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="520" parent="494" name="Name">
+    <column id="587" parent="501" name="Name">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="521" parent="494" name="PK_MerchantCategories">
+    <key id="588" parent="501" name="PK_MerchantCategories">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="522" parent="495" name="Id">
+    <column id="589" parent="502" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="523" parent="495" name="CategoryId">
+    <column id="590" parent="502" name="CategoryId">
       <DataType>INTEGER|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="524" parent="495" name="Name">
+    <column id="591" parent="502" name="Name">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="525" parent="495" name="FK_Merchants_MerchantCategories_CategoryId">
+    <foreign-key id="592" parent="502" name="FK_Merchants_MerchantCategories_CategoryId">
       <ColNames>CategoryId</ColNames>
       <RefColNames>Id</RefColNames>
       <RefKeyName>PK_MerchantCategories</RefKeyName>
       <RefTableName>MerchantCategories</RefTableName>
     </foreign-key>
-    <index id="526" parent="495" name="IX_Merchants_CategoryId">
+    <index id="593" parent="502" name="IX_Merchants_CategoryId">
       <ColNames>CategoryId</ColNames>
     </index>
-    <key id="527" parent="495" name="PK_Merchants">
+    <key id="594" parent="502" name="PK_Merchants">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="528" parent="496" name="Id">
+    <column id="595" parent="503" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="529" parent="496" name="Name">
+    <column id="596" parent="503" name="Name">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="530" parent="496" name="Price">
+    <column id="597" parent="503" name="Price">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="531" parent="496" name="MerchantId">
+    <column id="598" parent="503" name="MerchantId">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="532" parent="496" name="CategoryId">
+    <column id="599" parent="503" name="CategoryId">
       <DataType>INTEGER|0s</DataType>
       <Position>5</Position>
     </column>
-    <foreign-key id="533" parent="496" name="FK_Products_Merchants_MerchantId">
+    <foreign-key id="600" parent="503" name="FK_Products_Merchants_MerchantId">
       <ColNames>MerchantId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefKeyName>PK_Merchants</RefKeyName>
       <RefTableName>Merchants</RefTableName>
     </foreign-key>
-    <foreign-key id="534" parent="496" name="FK_Products_SubCategories_CategoryId">
+    <foreign-key id="601" parent="503" name="FK_Products_SubCategories_CategoryId">
       <ColNames>CategoryId</ColNames>
       <RefColNames>Id</RefColNames>
       <RefKeyName>PK_SubCategories</RefKeyName>
       <RefTableName>SubCategories</RefTableName>
     </foreign-key>
-    <index id="535" parent="496" name="IX_Products_MerchantId">
+    <index id="602" parent="503" name="IX_Products_MerchantId">
       <ColNames>MerchantId</ColNames>
     </index>
-    <index id="536" parent="496" name="IX_Products_CategoryId">
+    <index id="603" parent="503" name="IX_Products_CategoryId">
       <ColNames>CategoryId</ColNames>
     </index>
-    <key id="537" parent="496" name="PK_Products">
+    <key id="604" parent="503" name="PK_Products">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="538" parent="497" name="Id">
+    <column id="605" parent="504" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="539" parent="497" name="CategoryId">
+    <column id="606" parent="504" name="CategoryId">
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="540" parent="497" name="FK_SubCategories_Categories_CategoryId">
+    <column id="607" parent="504" name="Name">
+      <DataType>TEXT|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="608" parent="504" name="FK_SubCategories_Categories_CategoryId">
       <ColNames>CategoryId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefKeyName>PK_Categories</RefKeyName>
       <RefTableName>Categories</RefTableName>
     </foreign-key>
-    <index id="541" parent="497" name="IX_SubCategories_CategoryId">
+    <index id="609" parent="504" name="IX_SubCategories_CategoryId">
       <ColNames>CategoryId</ColNames>
     </index>
-    <key id="542" parent="497" name="PK_SubCategories">
+    <key id="610" parent="504" name="PK_SubCategories">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="543" parent="498" name="Id">
-      <DataType>INTEGER|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <key id="544" parent="498" name="PK_Users">
-      <ColNames>Id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="545" parent="499" name="MigrationId">
+    <column id="611" parent="505" name="MigrationId">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="546" parent="499" name="ProductVersion">
+    <column id="612" parent="505" name="ProductVersion">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="547" parent="499" name="sqlite_autoindex___EFMigrationsHistory_1">
+    <index id="613" parent="505" name="sqlite_autoindex___EFMigrationsHistory_1">
       <ColNames>MigrationId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="548" parent="499" name="PK___EFMigrationsHistory">
+    <key id="614" parent="505" name="PK___EFMigrationsHistory">
       <ColNames>MigrationId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
     </key>
-    <column id="549" parent="500" name="type">
+    <column id="615" parent="506" name="type">
       <DataType>text|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="550" parent="500" name="name">
+    <column id="616" parent="506" name="name">
       <DataType>text|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="551" parent="500" name="tbl_name">
+    <column id="617" parent="506" name="tbl_name">
       <DataType>text|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="552" parent="500" name="rootpage">
+    <column id="618" parent="506" name="rootpage">
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="553" parent="500" name="sql">
+    <column id="619" parent="506" name="sql">
       <DataType>text|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="554" parent="501" name="name">
+    <column id="620" parent="507" name="name">
       <Position>1</Position>
     </column>
-    <column id="555" parent="501" name="seq">
+    <column id="621" parent="507" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

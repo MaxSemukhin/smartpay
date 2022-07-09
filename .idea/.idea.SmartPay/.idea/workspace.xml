@@ -5,55 +5,18 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/efCoreCommonOptions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/aspnetcore-https.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/aspnetcore-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/vite-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/tsconfig.node.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/vite.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/ImportController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Extension/DbSetExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Category.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Check.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/ImportedLine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Merchant.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/MerchantCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/appsettings.json" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/Extension/HttpContextExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/Models/JWTData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmartPay/Models/LoginViaIdModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +24,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5b1a926c1df14e2e15b7987d838751ea3bd34e17b41df550bd2e01df3bb7a95/TimeSpanFormat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a1ad32abaee44480b66c2c1fcee9628cca92a4cd272eced5781564201180/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ab1417a245d2dd9ac4c8aea3ab1eeb0eca78f1bd9192d53675c3041d14d/IdentityUserLogin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93bf8ca51564b3532dce6442f8ec6d3856e11622b484427b6e965ca60aba4b1/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e39ba3357e1f443b65a76fc85efc6229329ac60a128b3d14d39bdb56ac7b9/IUserStore.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2BfawuvnKRMsQcI0uE2bNVcMHqB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -125,8 +96,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="25950000" />
+      <workItem from="1657299839367" duration="30383000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1657348638517</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657348638517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +126,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
