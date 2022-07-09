@@ -126,14 +126,14 @@ public class ImportController : ControllerBase
                             Merchant = merchand,
                             Name = line.ProcuctName,
                             Price = line.ProductCost
-                        };
+                        };  
         
                         _db.Products.Add(product);
                         memorizedProducts.Add(product);
                     }
         
                     if (check.Products == null) check.Products = new List<Product>();
-                    check.Products.Add(product);
+                    check.Products.Add(product); // ToDo Учитывать кол-во товара
                 }
             }
         

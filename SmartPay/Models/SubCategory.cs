@@ -10,3 +10,10 @@ public class SubCategory
     public Category Category { get; set; }
     public List<Product> Products { get; set; }
 }
+
+public class SubCategoryViewModel
+{
+    public int Id { get; set; }
+    
+    public string Name { get; set; }
+}

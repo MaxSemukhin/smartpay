@@ -8,5 +8,7 @@ public class AppMappingProfile : Profile
     public AppMappingProfile()
     {
         CreateMap<Check, CheckViewModel>();
+        CreateMap<Category, CategoryViewModel>();
+        CreateMap<SubCategory, SubCategoryViewModel>();
     }
 }

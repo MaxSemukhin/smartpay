@@ -5,13 +5,17 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="ContentBased">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="CollaborationBased&#10;Its works?">
+      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/FavoriteCategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources/215795f7-b0ec-410e-a7be-190b61e8aacd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Controllers/ImportController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Controllers/ImportController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/User.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,9 @@
         <option value="TypeScript React Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/717cef50bdf14647810fa108a45d24ce17c880/0b/860abe1f/DataViewUtils.cs" root0="SKIP_HIGHLIGHTING" />
@@ -51,7 +58,9 @@
     <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2BfawuvnKRMsQcI0uE2bNVcMHqB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -123,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="61987000" />
+      <workItem from="1657299839367" duration="65368000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657348638517</created>
@@ -160,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657375290925</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="CollaborationBased&#10;Its works?">
+      <created>1657389891013</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657389891014</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +202,8 @@
     <MESSAGE value="Client base auth" />
     <MESSAGE value="Logout page" />
     <MESSAGE value="ContentBased" />
-    <option name="LAST_COMMIT_MESSAGE" value="ContentBased" />
+    <MESSAGE value="CollaborationBased&#10;Its works?" />
+    <option name="LAST_COMMIT_MESSAGE" value="CollaborationBased&#10;Its works?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

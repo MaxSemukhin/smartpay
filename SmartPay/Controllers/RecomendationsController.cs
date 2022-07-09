@@ -232,8 +232,9 @@ public class RecomendationsController : ControllerBase
         
         var contendBased = ContentBased();
         var collaborationBased = CollaborationBased();
+        // ToDo Любимые категории
 
-        await Task.WhenAll(contendBased, collaborationBased);
+        await Task.WhenAll(contendBased, collaborationBased); // ToDo Перенести в интерфейсы
 
         recommendationList = recommendationList.Concat(contendBased.Result).ToList();
         recommendationList = recommendationList.Concat(collaborationBased.Result).ToList();
