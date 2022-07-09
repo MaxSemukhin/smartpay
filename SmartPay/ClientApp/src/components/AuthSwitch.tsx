@@ -9,8 +9,6 @@ export interface Props {
 function AuthSwitch(props: Props) {
     const auth = useAuth()
     
-    console.log(auth)
-    
     return auth.init ? auth.isAuthenticated ? props.auntificated : props.nonAuntificated : <></>
 }
 

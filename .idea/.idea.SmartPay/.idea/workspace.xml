@@ -5,17 +5,12 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Auth via id">
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/IndexPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/ChecksController.cs" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="Client base auth">
+      <change afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LogoutPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Mapping/AppMappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Check.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/components/AuthSwitch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/ClientApp/src/pages/LoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="35307000" />
+      <workItem from="1657299839367" duration="36263000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657348638517</created>
@@ -134,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657353212567</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Client base auth">
+      <created>1657359962910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657359962910</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +159,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Auth via id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth via id" />
+    <MESSAGE value="Client base auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client base auth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

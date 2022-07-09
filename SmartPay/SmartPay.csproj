@@ -61,6 +61,7 @@
       <TypeScriptCompile Include="ClientApp\src\main.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\IndexPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\LoginPage.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\pages\LogoutPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\vite-env.d.ts" />
       <TypeScriptCompile Include="ClientApp\vite.config.ts" />
     </ItemGroup>
