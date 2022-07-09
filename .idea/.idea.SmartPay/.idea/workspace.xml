@@ -5,12 +5,13 @@
     <projectFile profileName="IIS Express">SmartPay/SmartPay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" afterDir="false" />
+    <list default="true" id="7b26c9ba-e9cd-4e67-b525-4626a8b0559d" name="Changes" comment="ContentBased">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartPay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/SubCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Controllers/RecomendationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/Models/Recommendation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SmartPay/SmartPay.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +26,23 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/717cef50bdf14647810fa108a45d24ce17c880/0b/860abe1f/DataViewUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1139bec68f639ea68cf7ec50a3d2dcb5f2ebeeb7e1ed5151656aa3f3ac56cbfe/NavigationExpandingExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e3d8d2969c4d2f47fdb5382b19d0279bb07c63645c867e8c79f11f575b7ba9/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5b1a926c1df14e2e15b7987d838751ea3bd34e17b41df550bd2e01df3bb7a95/TimeSpanFormat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/71fadd84631aacc6a28895e5f18862faa7d8ae616c92a11fbb8159999fedc1e/DataViewType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a1ad32abaee44480b66c2c1fcee9628cca92a4cd272eced5781564201180/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ab1417a245d2dd9ac4c8aea3ab1eeb0eca78f1bd9192d53675c3041d14d/IdentityUserLogin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/93bf8ca51564b3532dce6442f8ec6d3856e11622b484427b6e965ca60aba4b1/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d599c1d1d627cb414d7fa2311e5318fcf19b8ab7147260fa7b35a6aa789a3b/Vector4.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e39ba3357e1f443b65a76fc85efc6229329ac60a128b3d14d39bdb56ac7b9/IUserStore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f148b1399e3e90d39d5276c4dd6698b2bcbfd7d9d38388aec895f4ca823198/VectorType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Programming/CsJs/SmartPay/SmartPay/Models/Product.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Programming/CsJs/SmartPay/SmartPay/Models/Product.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657299839158</updated>
-      <workItem from="1657299839367" duration="48313000" />
+      <workItem from="1657299839367" duration="61987000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657348638517</created>
@@ -144,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657362446595</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ContentBased">
+      <created>1657375290925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657375290925</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +185,8 @@
     <MESSAGE value="Auth via id" />
     <MESSAGE value="Client base auth" />
     <MESSAGE value="Logout page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logout page" />
+    <MESSAGE value="ContentBased" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContentBased" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

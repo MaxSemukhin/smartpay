@@ -3,5 +3,5 @@
 public class Recommendation
 {
     public Product Product { get; set; }
-    public int Score { get; set; }
+    public float Score { get; set; }
 }
