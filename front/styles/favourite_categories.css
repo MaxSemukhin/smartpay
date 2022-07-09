@@ -1,0 +1,47 @@
+p{
+	font-size: 1.6em;
+}
+
+span{
+	display: inline-block;
+	padding: 0px 8px 0px 8px;
+	border-radius: 100px;
+	height: 20px;
+  	width: 20px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+#food_span{
+	background: rgba(255, 0, 0, 0.2);
+}
+
+#electronics_span{
+	background: rgba(1, 184, 227, 0.2);
+}
+
+#auto_span{
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#medicine_span{
+	background: rgba(55, 223, 52, 0.2);
+}
+
+#gas_span{
+	background: rgb(101, 100, 219, 0.2);
+}
+
+@media screen and (max-width: 600px){
+	.container{
+	  width: 90%;
+	}
+
+	p{
+		font-size: 1.4em;
+	}	
+
+	button{
+		font-size: 1em;
+	}
+}
