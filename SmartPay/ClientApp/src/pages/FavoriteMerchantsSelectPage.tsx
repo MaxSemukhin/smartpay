@@ -2,7 +2,7 @@ import '../styles/favourite_shops.scss'
 import '../styles/favourite.css'
 import {useAuth} from "../components/AuthProvider";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import {
     CategoryViewModel,
     ChecksService,
@@ -13,6 +13,7 @@ import {
 } from "../api";
 import {upVariants} from "../animations";
 import {motion} from 'framer-motion';
+import {Checkbox} from "react-ionicons";
 
 export interface Props {
 
@@ -31,6 +32,19 @@ function FavoriteMerchantsSelectPage(props: Props) {
         })
         FavoriteService.getApiFavoriteMerchantsAll().then(d => setList(d))
     }, [])
+    
+    const post = () => {
+        FavoriteService.postApiFavoriteMerchants(selectedMerchants).finally(() => navigate('/app'))
+    }
+    
+    const check = (e: any, m: MerchantViewModel) => {
+        if (e.target.checked && !selectedMerchants.includes(m)) {
+            setSelectedMerchants(selectedMerchants.concat(m))
+        } else {
+            setSelectedMerchants(selectedMerchants.filter(s => s != m))
+        }
+    }
+    
 
     return <motion.div variants={upVariants} initial={'init'} animate={'show'} exit={'hide'} className={"layout"}>
         <motion.div className="container shops">
@@ -43,12 +57,12 @@ function FavoriteMerchantsSelectPage(props: Props) {
                 <button className="food">{l.name}</button>
                 <br/>
                 {l.merchants?.map(m => <motion.div>
-                    <input type="checkbox" className="custom-checkbox" name="shop" value="yes"/>
+                    <input checked={selectedMerchants.includes(m)} onChange={(e) => check(e, m)} type="checkbox" className="custom-checkbox" name="shop" value="yes"/>
                     <label htmlFor="shop">{m.name}</label>
                     <br/>
                 </motion.div>)}
             </motion.div>)}
-            <motion.button layout className="next" onClick={() => navigate('/app')}>Готово</motion.button>
+            <motion.button layout className="next" onClick={post}>Готово</motion.button>
         </motion.div>
     </motion.div>
 }

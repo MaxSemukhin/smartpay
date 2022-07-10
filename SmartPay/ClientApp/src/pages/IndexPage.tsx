@@ -11,9 +11,6 @@ function IndexPage() {
             <Link to={'/login'}>
                 <button className="user">Пользователь</button>
             </Link>
-            <Link to={'#'}>
-                <button className="admin">Админка</button>
-            </Link>
         </div>
     </>
 }

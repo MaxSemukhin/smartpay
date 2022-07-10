@@ -52,7 +52,7 @@ function MainPage(props: Props) {
             <div className="row">
                 {recommendations.map((r, i) => <div className="col-lg-4 col-sm-12">
                     <div className="card">
-                        <motion.img layout onLoad={() => setLoadedImages(loadedImages.concat(i))} src={r.product?.category?.imageUrl ? 'img/' + r.product?.category?.imageUrl : null || "img/place.jpeg"} className="card-img-top" alt="..."/>
+                        <motion.img layout onLoad={() => setLoadedImages(loadedImages.concat(i))} src={r.product?.category?.imageUrl ? 'img/' + r.product?.category?.imageUrl : null || "img/placeholder.PNG"} className="card-img-top" alt="..."/>
                         <motion.div layout className="card-body">
                             <h5 className="card-title">{r.product?.name}</h5>
                             <p className="card-text">Рекоменуем вам этот товар</p>
