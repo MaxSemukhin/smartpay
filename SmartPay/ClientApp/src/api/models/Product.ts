@@ -2,7 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Check } from './Check';
+import type { CheckProduct } from './CheckProduct';
 import type { Merchant } from './Merchant';
 import type { SubCategory } from './SubCategory';
 
@@ -10,7 +10,9 @@ export type Product = {
     id?: number;
     name?: string | null;
     price?: number;
-    checks?: Array<Check> | null;
+    checks?: Array<CheckProduct> | null;
+    merchantId?: number;
     merchant?: Merchant;
+    categoryId?: number;
     category?: SubCategory;
 };

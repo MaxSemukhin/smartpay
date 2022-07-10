@@ -7,7 +7,7 @@ public class Product
     public string Name { get; set; }
     public int Price { get; set; }
     
-    public List<Check> Checks { get; set; }
+    public List<CheckProduct> Checks { get; set; }
     
     public int MerchantId { get; set; }
     public Merchant Merchant { get; set; }

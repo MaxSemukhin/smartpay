@@ -1,0 +1,12 @@
+.container.main {
+	margin-top: 30px;
+}
+
+.main p{
+	text-align: center;
+}
+
+.col-lg-4, .col-sm-12{
+	margin-top: 20px;
+	padding: 10px;
+}

@@ -2,10 +2,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Product } from './Product';
+import type { CheckProduct } from './CheckProduct';
 
 export type CheckViewModel = {
     uid?: number;
     id?: number;
-    products?: Array<Product> | null;
+    products?: Array<CheckProduct> | null;
 };

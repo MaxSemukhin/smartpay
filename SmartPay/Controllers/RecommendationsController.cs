@@ -14,13 +14,13 @@ namespace SmartPay.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [Authorize]
-public class RecomendationsController : ControllerBase
+public class RecommendationsController : ControllerBase
 {
     private readonly ApplicationDbContext _db;
-    private readonly ILogger<RecomendationsController> _logger;
+    private readonly ILogger<RecommendationsController> _logger;
     private readonly IServiceProvider _provider;
 
-    public RecomendationsController(ApplicationDbContext db, ILogger<RecomendationsController> logger, IServiceProvider provider)
+    public RecommendationsController(ApplicationDbContext db, ILogger<RecommendationsController> logger, IServiceProvider provider)
     {
         _db = db;
         _logger = logger;

@@ -8,6 +8,7 @@ import type { Product } from './Product';
 export type SubCategory = {
     id?: number;
     name?: string | null;
+    categoryId?: number;
     category?: Category;
     products?: Array<Product> | null;
 };

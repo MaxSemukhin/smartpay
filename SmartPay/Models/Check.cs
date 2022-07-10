@@ -11,7 +11,7 @@ public class Check
 
     public User User { get; set; }
     public int UserId { get; set; }
-    public List<Product> Products { get; set; }
+    public List<CheckProduct> Products { get; set; }
 }
 
 public class CheckViewModel
@@ -20,5 +20,5 @@ public class CheckViewModel
 
     public int Id { get; set; }
 
-    public List<Product> Products { get; set; }
+    public List<CheckProduct> Products { get; set; }
 }

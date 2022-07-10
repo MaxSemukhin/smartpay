@@ -2,11 +2,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
+import type { Category } from './Category';
 import type { Check } from './Check';
 
 export type User = {
     id: number;
     checks?: Array<Check> | null;
+    favoriteCategories?: Array<Category> | null;
     isAdmin?: boolean;
     userName?: string | null;
     normalizedUserName?: string | null;

@@ -1,26 +1,20 @@
 import {useAuth} from "../components/AuthProvider";
 import {useEffect, useState} from "react";
 import {ChecksService, CheckViewModel} from "../api";
+import '../styles/index.scss'
+import {Link} from "react-router-dom";
 
 function IndexPage() {
-    const auth = useAuth()
-    
-    const [checks, setChecks] = useState<CheckViewModel[]>([])
-    
-    useEffect(() => {
-        ChecksService.getApiChecks().then(d => setChecks(d))
-    }, [])
-    
     return <>
-        Вы {auth.user?.id}
-        <ol>
-            {checks.map(c => <li>
-                <ul>
-                    {c.products?.map(p => <li>{p.name} {p.price}</li>)}
-                </ul>
-                <br/>
-            </li>)}
-        </ol>
+        <div className="container index">
+            <h1>Smart Pay</h1>
+            <Link to={'/login'}>
+                <button className="user">Пользователь</button>
+            </Link>
+            <Link to={'#'}>
+                <button className="admin">Админка</button>
+            </Link>
+        </div>
     </>
 }
 

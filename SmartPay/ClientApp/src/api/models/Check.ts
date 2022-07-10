@@ -2,7 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Product } from './Product';
+import type { CheckProduct } from './CheckProduct';
 import type { User } from './User';
 
 export type Check = {
@@ -10,5 +10,5 @@ export type Check = {
     id?: number;
     user?: User;
     userId?: number;
-    products?: Array<Product> | null;
+    products?: Array<CheckProduct> | null;
 };

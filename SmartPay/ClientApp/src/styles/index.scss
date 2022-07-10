@@ -1,0 +1,41 @@
+body {
+  background: #F9F9F9;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.index {
+  &.container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 800;
+  }
+
+  button {
+    width: 350px;
+    padding: 10px 30px 10px 30px;
+    display: block;
+    margin: 0px auto 10px auto;
+    font-weight: 400;
+  }
+
+  .user {
+    background: #6564DB;
+    border-radius: 30px;
+    border: 3px solid #F9F9F9;
+    margin-top: 100px;
+    color: white;
+  }
+
+  .admin {
+    border: 3px solid #6564DB;
+    border-radius: 30px;
+    color: #6564DB;
+  }
+}

@@ -46,4 +46,11 @@ public class FavoriteCategoriesController: ControllerBase
         
         return await _mapper.ProjectTo<CategoryViewModel>(_db.Categories.Where(c => c.Users.Contains(HttpContext.GetUser()))).ToListAsync();
     }
+    
+    
+    [HttpGet("all")]
+    public async  Task<ActionResult<List<CategoryViewModel>>> ListAll()
+    {
+        return await _mapper.ProjectTo<CategoryViewModel>(_db.Categories).ToListAsync();
+    }
 }

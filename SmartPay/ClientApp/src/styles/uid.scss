@@ -1,0 +1,41 @@
+.login {
+  &.container {
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  input {
+    width: 300px;
+    border-radius: 30px;
+    border: 3px solid #6564DB;
+    height: 40px;
+    padding: 5px 40px;
+  }
+
+  svg {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    right: 285px;
+    color: gray;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 492px) {
+    .container {
+      width: 90%;
+    }
+    textarea {
+      width: 250px;
+    }
+    ion-icon {
+      bottom: 10px;
+      right: 235px;
+    }
+  }
+}

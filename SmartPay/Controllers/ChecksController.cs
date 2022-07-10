@@ -25,6 +25,6 @@ public class ChecksController: ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<CheckViewModel>>> GetChecks()
     {
-        return await _mapper.ProjectTo<CheckViewModel>(_db.Checks.Where(c => c.UserId == HttpContext.GetUser().Id)).ToListAsync();
+        return await _mapper.ProjectTo<CheckViewModel>(_db.Checks.Where(c => c.UserId == HttpContext.GetUser().Id).Include("Products.Product")).ToListAsync();
     }
 }

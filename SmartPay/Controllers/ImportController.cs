@@ -78,6 +78,7 @@ public class ImportController : ControllerBase
         
         var memorizedProducts = new HashSet<Product>(await _db.Products.Include(p => p.Merchant).ToListAsync());
         var memorizedMerchants = await _db.Merchants.ToListAsync();
+        var memorizedChecksProducts = await _db.ChecksProducts.Include(cp => cp.Product).Include(cp => cp.Check).ToListAsync();
         
         var userIds = new HashSet<int>(lines.Select(l => l.UserId));
         
@@ -131,9 +132,28 @@ public class ImportController : ControllerBase
                         _db.Products.Add(product);
                         memorizedProducts.Add(product);
                     }
-        
-                    if (check.Products == null) check.Products = new List<Product>();
-                    check.Products.Add(product); // ToDo Учитывать кол-во товара
+
+                    var checkProduct =
+                        memorizedChecksProducts.FirstOrDefault(cp => cp.Product == product && cp.Check == check);
+
+                    if (checkProduct == null)
+                    {
+                        checkProduct = new CheckProduct()
+                        {
+                            Check = check,
+                            Product = product,
+                            Amount = 1,
+                            Cost = product.Price
+                        };
+                        
+                        if (check.Products == null) check.Products = new List<CheckProduct>();
+                        check.Products.Add(checkProduct);
+                        memorizedChecksProducts.Add(checkProduct);
+                    }
+                    else
+                    {
+                        checkProduct.Amount++;
+                    }
                 }
             }
         
