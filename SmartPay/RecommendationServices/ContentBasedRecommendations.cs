@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using SmartPay.Data;
 using SmartPay.Models;
 
@@ -7,15 +8,20 @@ namespace SmartPay.RecommendationServices;
 public class ContentBasedRecommendations: IRecommendationService
 {
     private readonly ApplicationDbContext _db;
+    private readonly IMapper _mapper;
 
-    public ContentBasedRecommendations(ApplicationDbContext db)
+    public ContentBasedRecommendations(ApplicationDbContext db, IMapper mapper)
     {
         _db = db;
+        _mapper = mapper;
     }
     
     public async Task<List<Recommendation>> GetRecommendations(HttpContext context)
     {
-        var checks = _db.Checks.Where(c => c.UserId == context.GetUser().Id);
+        var checks = _db.Checks
+            .Where(c => c.UserId == context.GetUser().Id)
+            .Include("Products.Product.Category")
+            .Include("Products.Product.Merchant");
         var allProducts = checks.SelectMany(c => c.Products.Select(p => p.Product));
         var counted = await allProducts
             .GroupBy(p => p.Id)
@@ -61,7 +67,7 @@ public class ContentBasedRecommendations: IRecommendationService
             .DistinctBy(c => c.Product.Id)
             .OrderByDescending(c => c.Score).Take(10).ToList();
 
-        var recommendationList = results.Select(r => new Recommendation() { Product = r.Product, Score = r.Score }).ToList();
+        var recommendationList = results.Select(r => new Recommendation() { Product =  _mapper.Map<ProductViewModel>(r.Product), Score = r.Score }).ToList();
 
         return recommendationList;
     }

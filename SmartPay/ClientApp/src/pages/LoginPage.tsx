@@ -4,6 +4,8 @@ import {AuthService} from "../api";
 import {useNavigate} from "react-router-dom";
 import {SearchOutline} from "react-ionicons";
 import '../styles/uid.scss'
+import { motion } from "framer-motion";
+import {enterUp, exitUp, initialUp, translition, upVariants} from "../animations";
 
 export interface Props {
 
@@ -43,14 +45,14 @@ function LoginPage(props: Props) {
         return () => document.removeEventListener("keydown", onKey)
     })
     
-    return <>
+    return <motion.div variants={upVariants} initial={'init'} animate={'show'} exit={'hide'} className={'layout'}>
         <div className="container login">
             <p>Для того, чтобы протестировать наш сервис предлагаем вам ввести один из предложенных id, который позволит
                 просмотреть как будет выглядеть аккаунт пользователя</p>
             <input onChange={(e) => setUserId(e.target.value)} value={userId} disabled={loading} tabIndex={0} placeholder="Введите id" id="uid_textarea"></input>
             <SearchOutline onClick={login}/>
         </div>
-    </>
+    </motion.div>
 }
 
 export default LoginPage;

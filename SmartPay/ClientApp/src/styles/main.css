@@ -2,11 +2,15 @@
 	margin-top: 30px;
 }
 
-.main p{
-	text-align: center;
-}
-
 .col-lg-4, .col-sm-12{
 	margin-top: 20px;
 	padding: 10px;
+}
+
+.layout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
 }

@@ -2,6 +2,6 @@
 
 public class Recommendation
 {
-    public Product Product { get; set; }
+    public ProductViewModel Product { get; set; }
     public float Score { get; set; }
 }

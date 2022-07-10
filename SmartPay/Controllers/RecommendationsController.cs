@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Numerics;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +20,14 @@ public class RecommendationsController : ControllerBase
     private readonly ApplicationDbContext _db;
     private readonly ILogger<RecommendationsController> _logger;
     private readonly IServiceProvider _provider;
+    private readonly IMapper _mapper;
 
-    public RecommendationsController(ApplicationDbContext db, ILogger<RecommendationsController> logger, IServiceProvider provider)
+    public RecommendationsController(ApplicationDbContext db, ILogger<RecommendationsController> logger, IServiceProvider provider, IMapper mapper)
     {
         _db = db;
         _logger = logger;
         _provider = provider;
+        _mapper = mapper;
     }
 
     private Product ProductWithoutChecks(Product product)
@@ -53,11 +56,11 @@ public class RecommendationsController : ControllerBase
         
         recommendationList = recommendationList.GroupBy(l => l.Product.Id).Select(g => new Recommendation()
         {
-            Product = ProductWithoutChecks(g.First().Product),
+            Product = g.First().Product,
             Score = g.Select(s => s.Score).Sum()
         }).ToList();
         recommendationList.Sort((r1, r2) => (int) Math.Round(r2.Score - r1.Score));
 
-        return recommendationList; // ToDo Кэширование
+        return recommendationList.Take(3).ToList(); // ToDo Кэширование
     }
 }

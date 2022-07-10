@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartPay.Data;
 
@@ -10,9 +11,10 @@ using SmartPay.Data;
 namespace SmartPay.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220710094222_Image")]
+    partial class Image
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.6");
@@ -30,21 +32,6 @@ namespace SmartPay.Migrations
                     b.HasIndex("UsersId");
 
                     b.ToTable("CategoryUser");
-                });
-
-            modelBuilder.Entity("MerchantUser", b =>
-                {
-                    b.Property<int>("FavoriteMerchantsId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("UsersId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("FavoriteMerchantsId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("MerchantUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
@@ -390,21 +377,6 @@ namespace SmartPay.Migrations
                     b.HasOne("SmartPay.Models.Category", null)
                         .WithMany()
                         .HasForeignKey("FavoriteCategoriesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SmartPay.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("MerchantUser", b =>
-                {
-                    b.HasOne("SmartPay.Models.Merchant", null)
-                        .WithMany()
-                        .HasForeignKey("FavoriteMerchantsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

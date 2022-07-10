@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using SmartPay.Models;
 using SmartPay.Controllers;
 using SmartPay.Data;
@@ -8,10 +9,12 @@ namespace SmartPay.RecommendationServices;
 public class FavoriteCategoriesBasedRecommendations: IRecommendationService
 {
     private readonly ApplicationDbContext _db;
+    private readonly IMapper _mapper;
 
-    public FavoriteCategoriesBasedRecommendations(ApplicationDbContext db)
+    public FavoriteCategoriesBasedRecommendations(ApplicationDbContext db, IMapper mapper)
     {
         _db = db;
+        _mapper = mapper;
     }
     
     public async Task<List<Recommendation>> GetRecommendations(HttpContext context)
@@ -20,7 +23,10 @@ public class FavoriteCategoriesBasedRecommendations: IRecommendationService
         await _db.Entry(user).Collection(u => u.FavoriteCategories).LoadAsync();
         
         var checks = _db.Checks.Where(c => c.UserId == context.GetUser().Id);
-        var products = _db.Products.Where(p => user.FavoriteCategories.Contains(p.Category.Category));
+        var products = _db.Products
+            .Where(p => user.FavoriteCategories.Contains(p.Category.Category))
+            .Include(p => p.Category)
+            .Include(p => p.Merchant);
         
         var counted = await products
             .GroupBy(p => p.Id)
@@ -54,7 +60,7 @@ public class FavoriteCategoriesBasedRecommendations: IRecommendationService
             .DistinctBy(c => c.Product.Id)
             .OrderByDescending(c => c.Score).Take(10).ToList();
 
-        var recommendationList = results.Select(r => new Recommendation() { Product = r.Product, Score = (float)r.Score }).ToList();
+        var recommendationList = results.Select(r => new Recommendation() { Product =  _mapper.Map<ProductViewModel>(r.Product), Score = (float)r.Score }).ToList();
 
         return recommendationList;
     }

@@ -2,9 +2,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Product } from './Product';
+import type { ProductViewModel } from './ProductViewModel';
 
 export type Recommendation = {
-    product?: Product;
+    product?: ProductViewModel;
     score?: number;
 };

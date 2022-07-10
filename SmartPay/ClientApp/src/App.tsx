@@ -9,7 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import AuthSwitch from "./components/AuthSwitch";
 import LogoutPage from "./pages/LogoutPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FavoriteShopsSelectPage from "./pages/FavoriteShopsSelectPage";
+import FavoriteMerchantsSelectPage from "./pages/FavoriteMerchantsSelectPage";
 import FavoriteCategoriesSelectPage from "./pages/FavoriteCategoriesSelectPage";
 import './styles/menu.css'
 import MainPage from "./pages/MainPage";
@@ -20,7 +20,7 @@ function App() {
     return (
         <AuthProvider>
             <AnimatePresence exitBeforeEnter>
-                <Routes>
+                <Routes key={location.pathname} location={location}>
                     <Route path="/" element={
                         <AuthSwitch
                             auntificated={<Navigate to={'/app'} replace={true}/>}
@@ -32,7 +32,9 @@ function App() {
                         auntificated={<FavoriteCategoriesSelectPage/>}
                         nonAuntificated={<Navigate to={'/login'} replace={true}/>}/>
                     }/>
-                    <Route path="favorite/shops" element={<FavoriteShopsSelectPage/>}/>
+                    <Route path="favorite/merchants" element={ <AuthSwitch
+                        auntificated={<FavoriteMerchantsSelectPage/>}
+                        nonAuntificated={<Navigate to={'/login'} replace={true}/>}/>}/>
                     <Route path="app" element={
                         <AuthSwitch
                             auntificated={<MainPage/>}

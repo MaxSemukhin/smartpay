@@ -4,11 +4,13 @@
 
 import type { Category } from './Category';
 import type { Check } from './Check';
+import type { Merchant } from './Merchant';
 
 export type User = {
     id: number;
     checks?: Array<Check> | null;
     favoriteCategories?: Array<Category> | null;
+    favoriteMerchants?: Array<Merchant> | null;
     isAdmin?: boolean;
     userName?: string | null;
     normalizedUserName?: string | null;

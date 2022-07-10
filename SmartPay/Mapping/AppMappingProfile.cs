@@ -10,5 +10,8 @@ public class AppMappingProfile : Profile
         CreateMap<Check, CheckViewModel>();
         CreateMap<Category, CategoryViewModel>();
         CreateMap<SubCategory, SubCategoryViewModel>();
+        CreateMap<SubCategory, SubCategoryProductViewModel>();
+        CreateMap<Product, ProductViewModel>();
+        CreateMap<Merchant, MerchantViewModel>();
     }
 }

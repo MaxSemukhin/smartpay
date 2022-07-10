@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using SmartPay.Controllers;
@@ -11,11 +12,13 @@ class CollaborationBasedRecommendations : IRecommendationService
 {
     private readonly ApplicationDbContext _db;
     private readonly ILogger<CollaborationBasedRecommendations> _logger;
+    private readonly IMapper _mapper;
 
-    public CollaborationBasedRecommendations(ApplicationDbContext db, ILogger<CollaborationBasedRecommendations> logger)
+    public CollaborationBasedRecommendations(ApplicationDbContext db, ILogger<CollaborationBasedRecommendations> logger, IMapper mapper)
     {
         _db = db;
         _logger = logger;
+        _mapper = mapper;
     }
 
 
@@ -26,7 +29,10 @@ class CollaborationBasedRecommendations : IRecommendationService
             var checks = _db.Checks.Include(c => c.Products);
             var userChecks = _db.Checks.Where(c => c.UserId == context.GetUser().Id);
 
-            var products = await _db.Products.ToListAsync();
+            var products = await _db.Products
+                .Include(p => p.Category)
+                .Include(p => p.Merchant)
+                .ToListAsync();
 
             var mlContext = new MLContext(seed: 0);
 
@@ -153,7 +159,7 @@ class CollaborationBasedRecommendations : IRecommendationService
                                         _logger.LogDebug("I can offer product {p} ({c}%)", products[j].Name,
                                             percent * 100);
                                         recommendations.Add(new Recommendation()
-                                            { Product = products[j], Score = percent });
+                                            { Product = _mapper.Map<ProductViewModel>(products[j]), Score = percent });
                                     }
                                 }
                             }

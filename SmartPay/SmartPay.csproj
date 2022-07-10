@@ -56,12 +56,13 @@
     </ItemGroup>
 
     <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\src\animations.ts" />
       <TypeScriptCompile Include="ClientApp\src\App.tsx" />
       <TypeScriptCompile Include="ClientApp\src\components\AuthProvider.tsx" />
       <TypeScriptCompile Include="ClientApp\src\components\AuthSwitch.tsx" />
       <TypeScriptCompile Include="ClientApp\src\main.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\FavoriteCategoriesSelectPage.tsx" />
-      <TypeScriptCompile Include="ClientApp\src\pages\FavoriteShopsSelectPage.tsx" />
+      <TypeScriptCompile Include="ClientApp\src\pages\FavoriteMerchantsSelectPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\IndexPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\LoginPage.tsx" />
       <TypeScriptCompile Include="ClientApp\src\pages\LogoutPage.tsx" />

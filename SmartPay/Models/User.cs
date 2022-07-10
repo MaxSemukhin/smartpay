@@ -12,6 +12,7 @@ public class User: IdentityUser<int>
     
     public List<Check> Checks { get; set; }
     public List<Category> FavoriteCategories { get; set; }
+    public List<Merchant> FavoriteMerchants { get; set; }
 
     public bool IsAdmin { get; set; }
 }
