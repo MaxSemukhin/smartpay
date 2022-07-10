@@ -56,7 +56,7 @@ class CollaborationBasedRecommendations : IRecommendationService
 
             IDataView dataView = mlContext.Data.LoadFromEnumerable<IrisData>(data, schemaDef);
 
-            var clustersCount = Math.Max((int)Math.Round(products.Count * 0.5f), 2); // Magic number
+            var clustersCount = Math.Max((int)Math.Round(products.Count * 0.1f), 2); // Magic number
             _logger.LogDebug("Clusters Count: {c}", clustersCount);
 
             string featuresColumnName = "Features";

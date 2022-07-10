@@ -16,9 +16,14 @@ function FavoriteCategoriesSelectPage(props: Props) {
     const [categories, setCategories] = useState<CategoryViewModel[]>()
     const [selectedCategories, setSelectedCategories] = useState<CategoryViewModel[]>([])
     const [loading, setLoading] = useState(false)
+    const [animate, setAnimate] = useState("init")
 
     useEffect(() => {
-        FavoriteService.getApiFavoriteCategoriesAll().then(d => setCategories(d))
+        FavoriteService.getApiFavoriteCategoriesAll().then(d => {
+            setAnimate("show")
+            console.log("AAAA")
+            setCategories(d)
+        })
     }, [])
 
     console.log(selectedCategories)
@@ -40,7 +45,7 @@ function FavoriteCategoriesSelectPage(props: Props) {
         }
     }
 
-    return <motion.div variants={upVariants} initial={'init'} animate={'show'} exit={'hide'} className={"layout"}>
+    return <motion.div variants={upVariants} initial={'init'} animate={animate} exit={'hide'} className={"layout"}>
         <div className="container categories">
                 <motion.p layout>Выберите наиболее интересные для вас категории, мы начислим на них наивысший кэшбэк</motion.p>
     

@@ -31,7 +31,7 @@ function MainPage(props: Props) {
         ChecksService.getApiChecks().then(d => setChecks(d))
         FavoriteService.getApiFavoriteCategories().then(d => {
             setFavoriteCategories(d)
-            if (d.length == 0) navigate('/favorite/categories')
+            if (d.length == 0) navigate('/favorite/categories', {replace: true})
         })
         RecommendationsService.getApiRecommendations().then(d => setRecommendations(d))
     }, [])
@@ -49,19 +49,23 @@ function MainPage(props: Props) {
         </div>
 
         <div className="container main">
-            <div className="row">
-                {recommendations.map((r, i) => <div className="col-lg-4 col-sm-12">
-                    <div className="card">
-                        <motion.img layout onLoad={() => setLoadedImages(loadedImages.concat(i))} src={r.product?.category?.imageUrl ? 'img/' + r.product?.category?.imageUrl : null || "img/placeholder.PNG"} className="card-img-top" alt="..."/>
-                        <motion.div layout className="card-body">
-                            <h5 className="card-title">{r.product?.name}</h5>
-                            <p className="card-text">Рекоменуем вам этот товар</p>
-                            <p className="card-text">{r.product?.price} ₽</p>
-                            <a onClick={() => alert("Я карта 🗺")} href="#" className="btn btn-primary">Купить</a>
-                        </motion.div>
-                    </div>
-                </div>)}
-            </div>
+            {recommendations.length > 0 &&
+                <motion.div initial={'init'} animate={'show'} transition={{staggerChildren: 0.3, delayChildren: 1}} className="row">
+                    {recommendations.map((r, i) => <motion.div variants={upVariants} className="col-lg-4 col-sm-12">
+                        <div className="card">
+                            <motion.img layout onLoad={() => setLoadedImages(loadedImages.concat(i))}
+                                        src={r.product?.category?.imageUrl ? 'img/' + r.product?.category?.imageUrl : null || "img/placeholder.PNG"}
+                                        className="card-img-top" alt="..."/>
+                            <motion.div layout className="card-body">
+                                <h5 className="card-title">{r.product?.name}</h5>
+                                <p className="card-text">Рекоменуем вам этот товар</p>
+                                <p className="card-text">{r.product?.price} ₽</p>
+                                <a onClick={() => alert("Я карта 🗺")} href="#" className="btn btn-primary">Купить</a>
+                            </motion.div>
+                        </div>
+                    </motion.div>)}
+                </motion.div>
+            }
         </div>
     </motion.div>
 }

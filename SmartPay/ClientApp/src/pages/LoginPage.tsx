@@ -50,7 +50,7 @@ function LoginPage(props: Props) {
             <p>Для того, чтобы протестировать наш сервис предлагаем вам ввести один из предложенных id, который позволит
                 просмотреть как будет выглядеть аккаунт пользователя</p>
             <input onChange={(e) => setUserId(e.target.value)} value={userId} disabled={loading} tabIndex={0} placeholder="Введите id" id="uid_textarea"></input>
-            <SearchOutline onClick={login}/>
+            <SearchOutline style={{zIndex: 9999}} onClick={login}/>
         </div>
     </motion.div>
 }
